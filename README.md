@@ -1,2 +1,0 @@
-# DivGrowthStockValuation
-Created with CodeSandbox

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./src/index.js"
+    ></script>
+    <meta charset="UTF-8" />
+    <style>
+      #title {
+        text-align: center;
+      }
+      #frame {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">Divident Growth Stock Valuation</h1>
+    <h3>Summary</h3>
+    <p type="circle">
+      The historical average dividend yield of high-quality dividend growth
+      stocks can be used to estimate a reasonable fair value of the stock.
+      <br />
+      <br />
+      Also, the dividend yield range over the same period can be used to
+      establish overvalued and undervalued price targets.
+      <br />
+      <br />
+      Swapping overvalued stocks for undervalued stocks could be a profitable
+      strategy, but care should be taken to select only high-quality dividend
+      growth stocks of solid, stable businesses.
+      <br />
+    </p>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <form
+      class="example"
+      action="action_page.php"
+      style="margin:auto;max-width:200px"
+    >
+      <input
+        id="searchinput"
+        type="text"
+        placeholder="Search.."
+        name="search"
+      />
+      <button type="submit" onclick="redirect()">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+    <br />
+
+    <iframe
+      id="frame"
+      src="https://datahub.io/core/s-and-p-500-companies-financials/r/1.html"
+      allign="middle"
+      width="80%"
+      height="500"
+      frameborder="1"
+    ></iframe>
+
+    <script>
+      function searchBar() {
+        var user = document.getElementById("searchinput").value;
+        //getMarket("TIME_SERIES_WEEKLY", user, key);
+        document.write(user);
+      }
+      function redirect() {
+        location.replace("result.html");
+      }
+    </script>
+  </body>
+</html>
